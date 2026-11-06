@@ -11,7 +11,7 @@ It gives Claude Code a game studio's worth of specialists (director, gameplay en
 - 🎬 **Short-form videos from real gameplay.** Record 9:16 footage with an autoplay bot, cut hooks, write the posting plan.
 - 💸 **Fewer tokens, fewer re-prompts.** Decisions live in files, agents get contracts, and "done" requires machine-checked evidence.
 
-> **Status:** the scripts, adapters and example game are tested end to end (everything shown below is real output). The agents and skills are written to drive that same tooling, but your first `/game-new` is the first full run of the agent pipeline. Please [open an issue](../../issues) if something feels off.
+> **Status:** the scripts, adapters and both example games are tested end to end (everything shown below is real output). The second example, LILY POND, was built by running the `/game-new` → ship → clip pipeline's steps with the kit's own scripts, and the kit caught a real portal-order bug in it. What has *not* been exercised yet is Claude Code loading the plugin and delegating to the eight agents as separate subagents, so your first `/game-new` is that run. Please [open an issue](../../issues) if something feels off.
 
 ## The final output
 
@@ -27,9 +27,18 @@ Everything below was built and checked **with the kit**: a complete example game
 
 <p align="center"><img src="docs/images/game-desktop.jpg" alt="OFF-CUT on desktop" width="720"></p>
 
+<p align="center">
+  <img src="docs/images/lily-pond-menu.jpg" alt="LILY POND title screen" height="420">
+  &nbsp;
+  <img src="docs/images/lily-pond-play.jpg" alt="LILY POND mid-leap with combo" height="420">
+</p>
+
+<p align="center"><sub>Second example, LILY POND: same kit, completely different art direction.</sub></p>
+
 - **Game:** [`examples/offcut`](examples/offcut): 40 KB total, no dependencies, risograph print look, procedural audio.
 - **Portal bundles:** `node scripts/build-portal.mjs examples/offcut --portal all` produces `dist/{poki,crazygames,youtube,itch}` + zips, all passing the audit and the mock-SDK playtest.
 - **Marketing clip:** [`examples/offcut-marketing/offcut-bot.mp4`](examples/offcut-marketing/offcut-bot.mp4) (1080×1920, 60 fps, recorded by the kit's bot).
+- **Second game, different look:** [`examples/lily-pond`](examples/lily-pond), a sumi-e ink-wash frog jumper made end to end with the kit (brief, art bible, feel targets and perf budget are in its `docs/`; clip in [`examples/lily-pond-marketing`](examples/lily-pond-marketing)).
 
 ## Try it in 2 minutes (no Claude needed)
 
@@ -73,7 +82,7 @@ More detail: **[docs/how-it-works.md](docs/how-it-works.md)**.
 | **Commands** (`commands/`) | `/game-new`, `/game-polish`, `/game-qa`, `/game-ship`, `/game-clip` |
 | **Scripts** (`scripts/`) | `init-game`, `build-portal`, `audit-bundle`, `playtest`, `record-clip` (+ `mock-sdks/`) |
 | **Adapters** (`platforms/`) | `poki`, `crazygames`, `youtube`, `itch`, `none`: one contract, no-ops when the SDK is absent |
-| **Example** (`examples/`) | OFF-CUT game + its marketing clip |
+| **Examples** (`examples/`) | OFF-CUT and LILY POND, each with a marketing clip |
 
 ## Portals
 

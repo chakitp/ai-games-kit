@@ -8,7 +8,7 @@ description: Capture real gameplay and produce 15-30 s vertical videos (TikTok, 
 Goal: 3 hook variants per game per week, all from real gameplay, each driving to one play link.
 
 ## 1. Make the game clip-ready
-- `?clip=1` URL mode: hides debug/cursor, fixes a seed (so a great run is replayable), skips menus, boosts readability (larger HUD numbers), optional scripted "showcase" input track (`marketing/showcase.json`).
+- `?clip=1` URL mode (also hide the game-over/"tap to retry" overlays and restart within ~0.6 s so no reel frame is a UI screen): hides debug/cursor, fixes a seed (so a great run is replayable), skips menus, boosts readability (larger HUD numbers), optional scripted "showcase" input track (`marketing/showcase.json`).
 - Pre-compose the 9:16 view: portrait games record as-is; landscape games either crop to the action (camera punch-in) or use a blurred-background letterbox, never tiny gameplay in a big black frame.
 
 ## 2. Capture
