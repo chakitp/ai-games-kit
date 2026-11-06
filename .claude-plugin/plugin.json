@@ -1,0 +1,8 @@
+{
+  "name": "ai-games-kit",
+  "version": "0.1.0",
+  "description": "A team of specialist agents + skills for Claude Code that ships high-quality web games (not AI slop): game dev, game feel, art direction, QA, performance, per-portal export (Poki, CrazyGames, YouTube Playables, itch, GameDistribution) and short-form marketing video.",
+  "author": { "name": "Chakit Patel" },
+  "keywords": ["games", "html5", "gamedev", "poki", "crazygames", "youtube-playables", "agents", "skills"],
+  "license": "MIT"
+}

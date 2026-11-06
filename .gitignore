@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.aigk/
+marketing/raw/
+*.log
+.DS_Store

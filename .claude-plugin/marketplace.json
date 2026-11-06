@@ -1,0 +1,11 @@
+{
+  "name": "ai-games-kit-marketplace",
+  "owner": { "name": "Chakit Patel" },
+  "plugins": [
+    {
+      "name": "ai-games-kit",
+      "source": "./",
+      "description": "Ship the game, not AI slop. Specialist agents + skills for building, polishing, exporting and marketing web games."
+    }
+  ]
+}

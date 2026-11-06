@@ -1,0 +1,16 @@
+{
+  "name": "ai-games-kit",
+  "version": "0.1.0",
+  "description": "Ship the game, not AI slop: Claude Code agents + skills + scripts for building, polishing, exporting and marketing web games.",
+  "private": false,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "demo:build": "node scripts/build-portal.mjs examples/offcut --portal all --out dist",
+    "demo:audit": "node scripts/audit-bundle.mjs dist/poki --portal poki",
+    "demo:test": "node scripts/playtest.mjs dist/poki --mock-sdk poki",
+    "demo:serve": "node -e \"require('http').createServer((q,r)=>{const f=require('path').join('examples/offcut',q.url.split('?')[0]==='/'?'index.html':q.url.split('?')[0]);require('fs').readFile(f,(e,d)=>{if(e){r.writeHead(404);return r.end()}r.writeHead(200,{'content-type':f.endsWith('.js')?'text/javascript':f.endsWith('.woff2')?'font/woff2':'text/html'});r.end(d)})}).listen(8080,()=>console.log('OFF-CUT on http://localhost:8080  (add ?bot=1 to watch the autoplayer)'))\""
+  },
+  "devDependencies": { "playwright": "^1.50.0" },
+  "engines": { "node": ">=20" }
+}
