@@ -1,6 +1,6 @@
 # LILY POND
 
-Hold to charge a frog's leap, release to land on the next lily pad; land dead-centre for a PERFECT and a rising bell. Sumi-e ink wash on paper with one vermilion accent. About 70 KB total (HTML + JS + one 28 KB font), no dependencies, procedural audio.
+Hold to charge a frog's leap, release to land on the next lily pad; land dead-centre for a PERFECT and a rising bell. Sumi-e ink wash on paper with one vermilion accent. About 55 KB total (HTML + JS + one 28 KB font), no dependencies, procedural audio.
 
 Made with the AI Games Kit to show a *different* look from OFF-CUT. The locked decisions are in [`docs/`](docs): brief, art bible, feel targets, perf budget.
 
